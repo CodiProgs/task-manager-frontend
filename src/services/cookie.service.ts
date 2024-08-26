@@ -11,7 +11,7 @@ export enum EnumCookie {
 
 class CookieService {
 	get(key: keyof typeof EnumCookie): string | undefined {
-		return Cookies.get(key)
+		return Cookies.get(EnumCookie[key])
 	}
 
 	set(

@@ -39,7 +39,8 @@ const DashboardLayout: FC<PropsWithChildren<IDashboardLayout>> = ({
 			/>
 			<div
 				style={{
-					marginLeft: sidebarIsHiddenState ? '0' : `${sidebarWidthState}px`
+					marginLeft:
+						sidebarIsHiddenState === true ? '0' : `${sidebarWidthState}px`
 				}}
 				className={styles.content}
 			>

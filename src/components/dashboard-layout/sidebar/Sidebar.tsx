@@ -22,7 +22,7 @@ const Sidebar: FC<SidebarProps> = ({
 	setWidth,
 	setIsHidden
 }) => {
-	return isHidden ? (
+	return isHidden === true ? (
 		<div className={styles.sidebar}>
 			<SidebarToggle
 				isHidden={isHidden}

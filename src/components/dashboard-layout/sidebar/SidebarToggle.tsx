@@ -18,7 +18,7 @@ const SidebarToggle: FC<SidebarToggleProps> = ({ isHidden, setIsHidden }) => {
 			className={styles.sidebarToggle}
 			onClick={toggleSidebar}
 		>
-			{isHidden ? <MoveRight size={16} /> : <MoveLeft size={16} />}
+			{isHidden === true ? <MoveRight size={16} /> : <MoveLeft size={16} />}
 		</button>
 	)
 }
