@@ -1,0 +1,5 @@
+mutation UpdateTimeBlock($input: TimeBlockDto!) {
+	updateTimeBlock(updateTimeBlockInput: $input) {
+		...TimeBlockFields
+	}
+}

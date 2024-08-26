@@ -1,0 +1,5 @@
+mutation CreatePomodoro($input: CreatePomodoroDto!) {
+	createPomodoro(createPomodoroInput: $input) {
+		...PomodoroFields
+	}
+}

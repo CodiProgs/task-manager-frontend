@@ -1,0 +1,156 @@
+.home {
+	@apply px-40;
+
+	.main {
+		@apply h-screen;
+
+		.background {
+			@apply absolute inset-0;
+
+			img {
+				@apply h-full w-full;
+			}
+		}
+
+		.content {
+			@apply z-10 relative h-full grid grid-cols-[.7fr,.3fr] gap-8 items-center;
+
+			h1 {
+				@apply text-7xl font-extrabold leading-[98px] mb-8;
+			}
+
+			button {
+				@apply text-xl h-12;
+			}
+
+			.image {
+				@apply relative w-full h-3/5;
+				img {
+					@apply object-contain w-auto h-full;
+				}
+			}
+		}
+
+		.link {
+			@apply absolute bottom-8 right-5 z-20 hover:underline underline-offset-4 text-primary;
+		}
+	}
+
+	.companies {
+		@apply py-4;
+
+		.divider {
+			@apply h-[1px] w-full;
+			background: linear-gradient(
+				183deg,
+				rgba(192, 204, 218, 0.1) 0%,
+				rgba(192, 204, 218, 0.6) 50%,
+				rgba(192, 204, 218, 0.1) 100%
+			);
+		}
+
+		.content {
+			@apply grid grid-cols-6 gap-16 py-4 my-4;
+
+			.item {
+				@apply relative w-full h-7;
+			}
+		}
+	}
+
+	h2 {
+		@apply text-5xl font-extrabold mb-2;
+	}
+
+	.description {
+		@apply text-lg;
+	}
+
+	.features {
+		@apply py-16 text-center;
+
+		.text {
+			@apply max-w-[540px] mx-auto mb-12;
+		}
+
+		.content {
+			@apply grid grid-cols-3 gap-x-8 gap-y-16;
+
+			.item {
+				@apply flex flex-col items-center;
+				.icon {
+					@apply size-8 mb-6 relative;
+				}
+
+				h3 {
+					@apply text-2xl font-semibold mb-2;
+				}
+			}
+		}
+	}
+
+	.achievements {
+		@apply py-20;
+
+		.content {
+			@apply gap-x-8 gap-y-10;
+
+			.item {
+				@apply flex items-center;
+				.icon {
+					@apply size-8 mr-4 relative;
+				}
+
+				h3 {
+					@apply text-2xl font-extrabold;
+				}
+			}
+		}
+	}
+
+	.headline {
+		@apply py-16 items-center;
+		.image {
+			@apply relative w-full flex justify-center;
+
+			img {
+				@apply w-auto h-full;
+			}
+		}
+		.text {
+			@apply px-12;
+
+			.heading {
+				@apply text-4xl mb-8 font-extrabold;
+			}
+			.link {
+				@apply mt-8 text-primary inline-flex items-center;
+
+				svg {
+					@apply size-5 ml-2;
+				}
+			}
+		}
+	}
+
+	.trends {
+		@apply py-16;
+
+		.text {
+			@apply mb-12;
+			.heading {
+				@apply text-4xl font-extrabold;
+			}
+		}
+		.image {
+			@apply relative w-full;
+			img {
+				@apply w-full h-[300px] object-cover rounded-lg;
+			}
+		}
+	}
+
+	.grid_custom {
+		@apply grid grid-cols-2 gap-8;
+	}
+}

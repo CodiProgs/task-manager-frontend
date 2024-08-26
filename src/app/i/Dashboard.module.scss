@@ -1,0 +1,83 @@
+.dashboard {
+	.statistics {
+		.user {
+			@apply flex items-center border-b border-fg/10 py-4;
+
+			.avatar {
+				@apply bg-fg/10 size-20 flex items-center justify-center rounded-sm;
+			}
+
+			.info {
+				@apply ml-4;
+
+				.name {
+					@apply font-bold text-xl capitalize;
+				}
+
+				.email {
+					@apply text-fg/60;
+				}
+			}
+		}
+
+		.items {
+			@apply grid grid-cols-4 gap-10 border-b border-fg/10 py-4;
+
+			.item {
+				@apply flex flex-col items-center justify-center bg-fg/10 rounded-md px-4 py-6 h-28;
+
+				.label {
+					@apply text-fg/60 text-sm font-bold mb-2;
+				}
+
+				.value {
+					@apply text-xl font-bold;
+				}
+			}
+		}
+
+		.chart {
+			@apply py-4;
+
+			.header {
+				@apply flex items-center gap-4 mb-4;
+
+				.heading {
+					@apply text-xl font-bold;
+				}
+			}
+
+			.container {
+				@apply w-3/5;
+
+				.tooltip {
+					@apply bg-bg_soft text-fg/90 rounded-md p-4;
+				}
+			}
+		}
+
+		.skeleton {
+			@apply animate-pulse;
+
+			.avatar {
+				@apply bg-fg/20;
+			}
+
+			.name {
+				@apply bg-fg/20 h-6 rounded-sm w-20 mb-1;
+			}
+
+			.email {
+				@apply bg-fg/20 h-5 rounded-sm w-36;
+			}
+
+			.item {
+				@apply bg-fg/20;
+			}
+		}
+
+		.loader {
+			@apply flex items-center justify-center h-64 w-full;
+		}
+	}
+}

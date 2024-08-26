@@ -1,0 +1,10 @@
+.rdp-root {
+	--rdp-day-height: 32px;
+	--rdp-day-width: 32px;
+	--rdp-day-font: 17px;
+	--rdp-background-color: rgba(255, 255, 255, 0.2);
+	--rdp-accent-color: #7551ff;
+
+	@apply m-1;
+	font-size: 85%;
+}

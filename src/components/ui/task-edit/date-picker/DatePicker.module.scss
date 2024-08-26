@@ -1,0 +1,11 @@
+.datePicker {
+	@apply absolute p-2.5 bg-bg_soft shadow rounded-lg z-50;
+
+	td {
+		@apply hover:bg-fg/5 rounded-lg;
+	}
+}
+
+.button {
+	@apply text-sm duration-200 text-fg/80 hover:text-fg;
+}

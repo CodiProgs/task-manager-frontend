@@ -1,0 +1,9 @@
+fragment StatisticsFields on StatisticsType {
+	statistics {
+		label
+		value
+	}
+	user {
+		...UserFields
+	}
+}

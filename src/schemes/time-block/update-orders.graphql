@@ -1,0 +1,5 @@
+mutation UpdateTimeBlockOrders($ids: [String!]!) {
+	updateTimeBlockOrders(ids: $ids) {
+		...TimeBlockFields
+	}
+}

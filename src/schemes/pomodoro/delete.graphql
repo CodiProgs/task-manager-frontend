@@ -1,0 +1,5 @@
+mutation DeletePomodoro($id: String!) {
+	deletePomodoro(id: $id) {
+		...PomodoroFields
+	}
+}

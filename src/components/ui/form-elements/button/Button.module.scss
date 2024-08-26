@@ -1,0 +1,15 @@
+.button {
+	@apply outline-none border duration-150 text-center rounded-md h-9 text-sm font-semibold;
+}
+
+.primary {
+	@apply border-fg/10 hover:bg-primary/80 hover:text-white px-7 focus:border-primary hover:border-primary;
+}
+
+.outline {
+	@apply flex items-center justify-center px-2 min-w-20 h-10 duration-200 rounded-md cursor-pointer border border-fg/5;
+
+	&:hover {
+		@apply bg-fg/10;
+	}
+}

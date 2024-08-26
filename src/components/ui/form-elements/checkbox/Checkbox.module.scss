@@ -1,0 +1,24 @@
+.checkbox {
+	@apply inline-flex items-center;
+
+	.container {
+		@apply relative flex items-center p-1 rounded-sm cursor-pointer;
+
+		.input {
+			@apply relative size-4 cursor-pointer appearance-none rounded-sm border border-fg/20 bg-fg/10 transition-all checked:border-fg/90 checked:bg-fg/90 checked:before:bg-fg/90 hover:scale-110 hover:before:opacity-0;
+
+			&::before {
+				content: '';
+				@apply absolute top-2/4 left-2/4 block size-6 -translate-y-2/4 -translate-x-2/4 rounded-sm bg-primary opacity-0 transition-opacity;
+			}
+		}
+
+		.checkmark {
+			@apply absolute transition-opacity pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4;
+
+			svg {
+				@apply size-3;
+			}
+		}
+	}
+}

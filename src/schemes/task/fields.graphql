@@ -1,0 +1,9 @@
+fragment TaskFields on TaskType {
+	id
+	createdAt
+	name
+	priority
+	isCompleted
+	estimatedTime
+	spentTime
+}

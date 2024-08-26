@@ -1,0 +1,128 @@
+.table {
+	@apply w-full;
+
+	.parent {
+		@apply mb-2;
+	}
+
+	.overdue {
+		.row {
+			@apply bg-[#DC143C]/5;
+		}
+
+		.row:hover {
+			@apply bg-[#DC143C]/10;
+		}
+
+		.colHeading {
+			@apply text-[#DC143C];
+		}
+	}
+
+	.completed {
+		input {
+			@apply line-through text-fg/40;
+		}
+	}
+
+	.colHeading {
+		@apply px-4 py-2 text-fg/80 text-lg font-bold border-b border-fg/10;
+
+		> div {
+			@apply w-full;
+		}
+	}
+
+	.row {
+		@apply grid grid-cols-[1.4fr_.2fr_.2fr_.2fr] items-center border-b border-fg/10 text-sm transition-colors;
+
+		&:hover {
+			@apply bg-fg/5;
+		}
+
+		&.error {
+			@apply bg-[#DC143C]/5;
+		}
+
+		&.error:hover {
+			@apply bg-[#DC143C]/10;
+		}
+
+		&.new {
+			@apply bg-[#FFD700]/5 shadow-md;
+		}
+
+		> div {
+			@apply py-2 px-4 border-r border-fg/10;
+
+			&:last-child {
+				@apply border-r-0;
+			}
+		}
+
+		.rowItem {
+			@apply h-full flex items-center capitalize;
+
+			&:last-child {
+				@apply justify-center;
+			}
+
+			.controls {
+				@apply inline-flex items-center gap-2.5 w-full;
+			}
+
+			.grip {
+				@apply opacity-20 transition-opacity -ml-3 -mr-1 cursor-grab;
+
+				&:hover,
+				&:active {
+					@apply opacity-100;
+				}
+			}
+		}
+
+		.priority {
+			> div {
+				@apply flex items-center justify-center;
+
+				> button {
+					@apply size-6 flex items-center justify-center;
+
+					svg {
+						@apply size-5;
+					}
+				}
+
+				> div {
+					@apply left-1/2 transform -translate-x-1/2;
+
+					> button {
+						@apply w-40;
+					}
+				}
+			}
+		}
+
+		.date {
+			> div:first-child {
+				@apply w-full text-center;
+			}
+		}
+	}
+
+	.header {
+		@apply border-y border-fg/10 mb-2 text-sm font-semibold;
+
+		&:hover {
+			@apply bg-transparent;
+		}
+	}
+
+	.addRow {
+		@apply py-2 px-4;
+
+		button {
+			@apply italic opacity-40 text-sm w-full text-start;
+		}
+	}
+}

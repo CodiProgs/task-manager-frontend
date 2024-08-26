@@ -1,0 +1,5 @@
+mutation UpdatePomodoro($id: String!, $input: UpdatePomodoroDto!) {
+	updatePomodoro(id: $id, updatePomodoroInput: $input) {
+		...PomodoroFields
+	}
+}

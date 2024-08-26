@@ -1,0 +1,5 @@
+mutation UpdatePomodoroSettings($input: PomodoroSettingsDto!) {
+	updatePomodoroSettings(updatePomodoroSettingsInput: $input) {
+		...PomodoroSettingsFields
+	}
+}

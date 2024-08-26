@@ -1,0 +1,17 @@
+fragment PomodoroFields on PomodoroType {
+	id
+	createdAt
+	totalSeconds
+	remainingSeconds
+	type
+	status
+}
+
+fragment PomodoroSettingsFields on PomodoroSettingsType {
+	id
+	workInterval
+	breakInterval
+	longBreakInterval
+	longBreakAfter
+	retentionPeriod
+}

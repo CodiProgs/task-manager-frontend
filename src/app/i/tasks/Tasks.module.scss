@@ -1,0 +1,13 @@
+.switcher {
+	@apply flex items-center gap-5 mb-5 text-sm;
+
+	.button {
+		&.active {
+			@apply bg-fg/10;
+		}
+
+		svg {
+			@apply mr-2 size-4;
+		}
+	}
+}

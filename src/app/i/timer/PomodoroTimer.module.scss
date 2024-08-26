@@ -1,0 +1,48 @@
+.pomodoroTimer {
+	@apply grid grid-cols-2 gap-10;
+
+	.timer {
+		@apply flex flex-col items-center;
+
+		.time {
+			@apply text-7xl font-semibold mt-10 mb-3 flex items-center;
+
+			.minutes,
+			.seconds {
+				@apply text-end w-[2ch];
+			}
+
+			.colon {
+				@apply pb-2;
+			}
+		}
+
+		.controls {
+			@apply flex items-center justify-between mb-5 gap-5 w-[15ch];
+
+			.button {
+				@apply opacity-60 hover:opacity-100 transition-opacity;
+
+				&:disabled {
+					@apply cursor-not-allowed opacity-40;
+				}
+			}
+		}
+	}
+
+	.sessions {
+		@apply w-3/5;
+	}
+}
+
+.pomodoroTypes {
+	@apply flex items-center gap-5;
+
+	.type {
+		@apply min-w-28;
+
+		&.active {
+			@apply bg-fg/10;
+		}
+	}
+}

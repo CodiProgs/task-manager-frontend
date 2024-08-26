@@ -1,0 +1,7 @@
+fragment TimeBlockFields on TimeBlockType {
+	id
+	name
+	duration
+	order
+	color
+}

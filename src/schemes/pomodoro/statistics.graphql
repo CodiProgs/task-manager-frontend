@@ -1,0 +1,7 @@
+query GetPomodoroStatistics($days: Float) {
+	getPomodoroStatistics(days: $days) {
+		count
+		date
+		minutes
+	}
+}

@@ -1,0 +1,98 @@
+.board {
+	@apply grid grid-flow-col gap-8 w-full overflow-x-auto;
+
+	.column {
+		@apply w-[17rem] whitespace-nowrap min-h-[calc(75vh)];
+
+		.colHeading {
+			@apply py-2 text-fg/80 text-lg font-bold border-b border-fg/10 mb-5;
+		}
+
+		.card {
+			@apply rounded border border-fg/10 p-4 relative bg-fg/5 duration-200 transition-colors;
+
+			&:hover {
+				@apply bg-fg/10;
+			}
+
+			&.error {
+				@apply bg-[#DC143C]/5;
+			}
+
+			&.error:hover {
+				@apply bg-[#DC143C]/10;
+			}
+
+			&.new {
+				@apply bg-[#FFD700]/5 shadow-md;
+			}
+
+			&.completed {
+				input {
+					@apply line-through text-fg/40;
+				}
+			}
+
+			.details {
+				@apply flex items-center gap-4 mb-2;
+			}
+
+			.priority {
+				@apply p-1;
+				> div {
+					@apply flex items-center justify-center;
+
+					> button {
+						@apply size-6 flex items-center justify-center;
+
+						svg {
+							@apply size-5;
+						}
+					}
+
+					> div {
+						@apply left-1/2 transform -translate-x-1/2;
+
+						> button {
+							@apply w-40;
+						}
+					}
+				}
+			}
+
+			.controls {
+				@apply flex items-center w-full mb-2;
+				> span {
+					@apply inline-flex items-center w-full;
+
+					> div:nth-child(3) {
+						@apply ml-2 mr-3;
+					}
+				}
+			}
+
+			.actions {
+				@apply absolute bottom-0 right-0 p-2;
+			}
+		}
+	}
+
+	.colBody {
+		@apply flex flex-col gap-5;
+	}
+
+	.grip {
+		@apply opacity-20 transition-opacity -ml-1 -mr-0.5 cursor-grab absolute top-2 right-2;
+
+		&:hover,
+		&:active {
+			@apply opacity-100;
+		}
+	}
+
+	.addCard {
+		button {
+			@apply italic opacity-40 text-sm w-full text-start;
+		}
+	}
+}

@@ -1,0 +1,5 @@
+mutation DeleteTimeBlock($id: String!) {
+	deleteTimeBlock(id: $id) {
+		...TimeBlockFields
+	}
+}

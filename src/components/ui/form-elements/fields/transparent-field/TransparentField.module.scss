@@ -1,0 +1,11 @@
+.transparentField {
+	@apply relative w-full;
+
+	.input {
+		@apply bg-transparent border-none focus:outline-0 focus:shadow-transparent w-full z-30 relative;
+	}
+
+	.error {
+		@apply absolute inset-0 text-red-500 text-xs leading-5;
+	}
+}
