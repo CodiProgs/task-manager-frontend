@@ -38,11 +38,9 @@ export type CreatePomodoroDto = {
 
 export type CreateTaskDto = {
   createdAt?: InputMaybe<Scalars['String']['input']>;
-  estimatedTime?: InputMaybe<Scalars['Float']['input']>;
   isCompleted?: InputMaybe<Scalars['Boolean']['input']>;
   name: Scalars['String']['input'];
   priority?: InputMaybe<Priority>;
-  spentTime?: InputMaybe<Scalars['Float']['input']>;
 };
 
 export type Mutation = {
@@ -210,12 +208,10 @@ export enum StatusPomodoro {
 export type TaskType = {
   __typename?: 'TaskType';
   createdAt: Scalars['DateTime']['output'];
-  estimatedTime?: Maybe<Scalars['Float']['output']>;
   id: Scalars['String']['output'];
   isCompleted: Scalars['Boolean']['output'];
   name: Scalars['String']['output'];
   priority: Priority;
-  spentTime?: Maybe<Scalars['Float']['output']>;
 };
 
 export type TimeBlockDto = {
@@ -249,11 +245,9 @@ export type UpdatePomodoroDto = {
 
 export type UpdateTaskDto = {
   createdAt?: InputMaybe<Scalars['String']['input']>;
-  estimatedTime?: InputMaybe<Scalars['Float']['input']>;
   isCompleted?: InputMaybe<Scalars['Boolean']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
   priority?: InputMaybe<Priority>;
-  spentTime?: InputMaybe<Scalars['Float']['input']>;
 };
 
 export type UserDto = {
@@ -339,21 +333,21 @@ export type CreateTaskMutationVariables = Exact<{
 }>;
 
 
-export type CreateTaskMutation = { __typename?: 'Mutation', createTask: { __typename?: 'TaskType', id: string, createdAt: any, name: string, priority: Priority, isCompleted: boolean, estimatedTime?: number | null, spentTime?: number | null } };
+export type CreateTaskMutation = { __typename?: 'Mutation', createTask: { __typename?: 'TaskType', id: string, createdAt: any, name: string, priority: Priority, isCompleted: boolean } };
 
 export type DeleteTaskMutationVariables = Exact<{
   id: Scalars['String']['input'];
 }>;
 
 
-export type DeleteTaskMutation = { __typename?: 'Mutation', deleteTask: { __typename?: 'TaskType', id: string, createdAt: any, name: string, priority: Priority, isCompleted: boolean, estimatedTime?: number | null, spentTime?: number | null } };
+export type DeleteTaskMutation = { __typename?: 'Mutation', deleteTask: { __typename?: 'TaskType', id: string, createdAt: any, name: string, priority: Priority, isCompleted: boolean } };
 
-export type TaskFieldsFragment = { __typename?: 'TaskType', id: string, createdAt: any, name: string, priority: Priority, isCompleted: boolean, estimatedTime?: number | null, spentTime?: number | null };
+export type TaskFieldsFragment = { __typename?: 'TaskType', id: string, createdAt: any, name: string, priority: Priority, isCompleted: boolean };
 
 export type TasksQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type TasksQuery = { __typename?: 'Query', tasks: Array<{ __typename?: 'TaskType', id: string, createdAt: any, name: string, priority: Priority, isCompleted: boolean, estimatedTime?: number | null, spentTime?: number | null }> };
+export type TasksQuery = { __typename?: 'Query', tasks: Array<{ __typename?: 'TaskType', id: string, createdAt: any, name: string, priority: Priority, isCompleted: boolean }> };
 
 export type UpdateTaskMutationVariables = Exact<{
   id: Scalars['String']['input'];
@@ -361,7 +355,7 @@ export type UpdateTaskMutationVariables = Exact<{
 }>;
 
 
-export type UpdateTaskMutation = { __typename?: 'Mutation', updateTask: { __typename?: 'TaskType', id: string, createdAt: any, name: string, priority: Priority, isCompleted: boolean, estimatedTime?: number | null, spentTime?: number | null } };
+export type UpdateTaskMutation = { __typename?: 'Mutation', updateTask: { __typename?: 'TaskType', id: string, createdAt: any, name: string, priority: Priority, isCompleted: boolean } };
 
 export type CreateTimeBlockMutationVariables = Exact<{
   input: TimeBlockDto;
@@ -446,8 +440,6 @@ export const TaskFieldsFragmentDoc = gql`
   name
   priority
   isCompleted
-  estimatedTime
-  spentTime
 }
     `;
 export const TimeBlockFieldsFragmentDoc = gql`

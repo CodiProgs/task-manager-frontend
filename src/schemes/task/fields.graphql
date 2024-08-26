@@ -4,6 +4,4 @@ fragment TaskFields on TaskType {
 	name
 	priority
 	isCompleted
-	estimatedTime
-	spentTime
 }
